@@ -1,0 +1,58 @@
+.bar {
+    width: 100%;
+    background-color: #252525;
+    height: 50px;
+    margin-top: 50px;
+    
+}
+
+.bar span   {
+    color:snow;
+    font-weight: bold;
+    font-size:34px;
+    margin-left:40px;
+}
+
+.btn    {
+    background-color: rgb(84,26,66);
+    color:snow;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.error  {
+    color:red;
+    font-size: 15px;
+    text-align: center;
+}
+
+.form-box   {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0px;
+    width: 400px;
+    height: 350px;
+    margin-top: 75px;
+    background-repeat: no-repeat;
+    padding: 20px; 
+    border-style: solid;
+    border-width: 3px;
+    border-color:rgb(203,172,210);
+    border-radius: 8%;
+}
+
+.form-box h2    {
+    color:snow;
+}
+
+.form-control-feedback {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+  }
+  
+  .form-control {
+    margin-top: 30px;
+    padding-left: 30px!important;
+  }
