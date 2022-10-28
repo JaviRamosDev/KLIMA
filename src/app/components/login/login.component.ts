@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
 
     this.userService.login(email, password).subscribe( data => {
       if(data.token)  {
+        this.userService.token = data.token;
         this.navigation.navigate(['home']);
       }else {
         this.toastr.error("El usuario o password introducidos no son correctos");

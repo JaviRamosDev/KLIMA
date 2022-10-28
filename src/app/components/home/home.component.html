@@ -1,1 +1,72 @@
-<p>home works!</p>
+<div class="container-fluid">
+	<div class="row" style="height:60vh;">
+		<div class="col-4 aside blanco">
+			<h4><i class="fa fa-star"></i>&nbsp;Favoritas:</h4>
+			<div *ngFor="let favorita of favoritas; let i = index">
+				<div class="row" style="margin-top:5px;">
+					<div class="col-9" style="margin-top:8px;">
+						<span style="margin-left:27px; cursor:pointer" class="blanco" (click)="nombreCiudad=favorita; agregarFavorita();">{{favorita}}</span>
+					</div>
+
+					<div class="col-3">
+						<button type="button" class="btn btn-default" (click)="eliminarFavorita(i)">
+							<span class="botonEliminar"><i class="fa fa-trash"></i></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-8 centrado">
+			<div class="card text-white bg-dark mb-3" style="width: 40%;" [ngClass]="{hidden: favoritas.length==0}">
+				<div class="card-header">
+					<h5>{{weather.nombre}}</h5>
+					<img src={{weather.icono}} alt="">
+				</div>
+
+				<div class="card-body">
+					<div class="row">
+						<p>- {{weather.main}}</p>
+					</div>
+
+					<div class="row">
+						<p>- {{weather.description}}</p>
+					</div>
+
+					<div class="row">
+						<p>- Temperature: {{weather.temperature.toFixed(2)}}ºC</p>
+					</div>
+
+					<div class="row">
+						<p>- Humidity: {{weather.humidity}}%</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="height:15vh;">
+		<div class="col-4">
+			<div class="form-group" style="margin-left:1px;">
+				<form>
+					<label class="blanco" style="margin-left:1px;"><b>Seleccionar ciudad</b></label>
+					<div class="row" style="margin-left:1px;">
+						<input style="width:60%;" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="nombreCiudad" [formControl]="formControl" [matAutocomplete]="auto">
+						<button style="width:30%" type="button" class="btn btn-block" (click)="agregarFavorita();">Seleccionar</button>
+					</div>
+					
+					
+					<div >
+						<mat-autocomplete #auto="matAutocomplete">
+							<mat-option *ngFor="let nombre of autoFilter | async | slice : 0 : 3" [value]="nombre">
+								<div style="display:flex;">
+									<span class="blanco">{{nombre}}</span>
+								</div>
+							</mat-option>
+						</mat-autocomplete>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+

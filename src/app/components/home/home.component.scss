@@ -1,0 +1,49 @@
+::ng-deep .mat-autocomplete-panel{
+    background-color: #252525;
+    color:snow;
+  }
+h4  {
+    margin-top:20px;
+}
+
+p   {
+    margin-left:10px;
+}
+
+.aside  {
+    width: 100%;
+    background-color: #252525;
+    height:100vh;
+}
+
+.blanco {
+    color:snow;
+}
+
+.botonEliminar  {
+    width:6px;
+    height:6px;
+}
+
+.btn    {
+    background-color: rgb(84,26,66);
+    color:snow;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+.form-group {
+    margin-top:20px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+

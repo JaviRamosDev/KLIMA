@@ -9,6 +9,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
+import { CommonModule } from '@angular/common'
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
+import {MatInputModule} from '@angular/material/input';
+
+//import { MatAutocompleteModule } from '@angular/material/autocomplete';
+//import { NgbTypeahead, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
+// import { MatSelectModule } from '@angular/material/select';
+//import {AutocompleteLibModule} from 'angular-ng-autocomplete';
+//import { Ng2CompleterModule } from 'ng2-completer';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +35,19 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+
+    CommonModule,
+    
+    MatInputModule,
+    MatFormFieldModule,
+    MatAutocompleteModule,
+    FormsModule, 
+    
+    //NgbTypeaheadModule,
+    //MatAutocompleteModule,
+    // MatSelectModule,
+    //AutocompleteLibModule,
+    //Ng2CompleterModule,
     ToastrModule.forRoot()
   ],
   providers: [],
